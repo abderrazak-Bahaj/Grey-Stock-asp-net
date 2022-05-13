@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="store_sale_pointDataSet" targetNamespace="http://tempuri.org/store_sale_pointDataSet.xsd" xmlns:mstns="http://tempuri.org/store_sale_pointDataSet.xsd" xmlns="http://tempuri.org/store_sale_pointDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="constore_sale_point" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="constore_sale_point (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.constore_sale_point.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_1TableAdapter" GeneratorDataComponentClassName="View_1TableAdapter" Name="View_1" UserDataComponentName="View_1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="constore_sale_point (Web.config)" DbObjectName="store_sale_point.dbo.View_1" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT order_kind_id, branch_name, store_name, order_master_code, product_name, order_master_datecreation, order_details_quantity, order_details_product_price, unit_name, order_details_total_price, product_code FROM dbo.View_1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="order_kind_id" DataSetColumn="order_kind_id" />
+              <Mapping SourceColumn="branch_name" DataSetColumn="branch_name" />
+              <Mapping SourceColumn="store_name" DataSetColumn="store_name" />
+              <Mapping SourceColumn="order_master_code" DataSetColumn="order_master_code" />
+              <Mapping SourceColumn="product_name" DataSetColumn="product_name" />
+              <Mapping SourceColumn="order_master_datecreation" DataSetColumn="order_master_datecreation" />
+              <Mapping SourceColumn="order_details_quantity" DataSetColumn="order_details_quantity" />
+              <Mapping SourceColumn="order_details_product_price" DataSetColumn="order_details_product_price" />
+              <Mapping SourceColumn="unit_name" DataSetColumn="unit_name" />
+              <Mapping SourceColumn="order_details_total_price" DataSetColumn="order_details_total_price" />
+              <Mapping SourceColumn="product_code" DataSetColumn="product_code" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="store_sale_pointDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="store_sale_pointDataSet" msprop:Generator_UserDSName="store_sale_pointDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_1" msprop:Generator_TableClassName="View_1DataTable" msprop:Generator_TableVarName="tableView_1" msprop:Generator_RowChangedName="View_1RowChanged" msprop:Generator_TablePropName="View_1" msprop:Generator_RowDeletingName="View_1RowDeleting" msprop:Generator_RowChangingName="View_1RowChanging" msprop:Generator_RowEvHandlerName="View_1RowChangeEventHandler" msprop:Generator_RowDeletedName="View_1RowDeleted" msprop:Generator_RowClassName="View_1Row" msprop:Generator_UserTableName="View_1" msprop:Generator_RowEvArgName="View_1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="order_kind_id" msprop:Generator_ColumnVarNameInTable="columnorder_kind_id" msprop:Generator_ColumnPropNameInRow="order_kind_id" msprop:Generator_ColumnPropNameInTable="order_kind_idColumn" msprop:Generator_UserColumnName="order_kind_id" type="xs:int" minOccurs="0" />
+              <xs:element name="branch_name" msprop:Generator_ColumnVarNameInTable="columnbranch_name" msprop:Generator_ColumnPropNameInRow="branch_name" msprop:Generator_ColumnPropNameInTable="branch_nameColumn" msprop:Generator_UserColumnName="branch_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="store_name" msprop:Generator_ColumnVarNameInTable="columnstore_name" msprop:Generator_ColumnPropNameInRow="store_name" msprop:Generator_ColumnPropNameInTable="store_nameColumn" msprop:Generator_UserColumnName="store_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="order_master_code" msprop:Generator_ColumnVarNameInTable="columnorder_master_code" msprop:Generator_ColumnPropNameInRow="order_master_code" msprop:Generator_ColumnPropNameInTable="order_master_codeColumn" msprop:Generator_UserColumnName="order_master_code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="product_name" msprop:Generator_ColumnVarNameInTable="columnproduct_name" msprop:Generator_ColumnPropNameInRow="product_name" msprop:Generator_ColumnPropNameInTable="product_nameColumn" msprop:Generator_UserColumnName="product_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="order_master_datecreation" msprop:Generator_ColumnVarNameInTable="columnorder_master_datecreation" msprop:Generator_ColumnPropNameInRow="order_master_datecreation" msprop:Generator_ColumnPropNameInTable="order_master_datecreationColumn" msprop:Generator_UserColumnName="order_master_datecreation" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="order_details_quantity" msprop:Generator_ColumnVarNameInTable="columnorder_details_quantity" msprop:Generator_ColumnPropNameInRow="order_details_quantity" msprop:Generator_ColumnPropNameInTable="order_details_quantityColumn" msprop:Generator_UserColumnName="order_details_quantity" type="xs:int" minOccurs="0" />
+              <xs:element name="order_details_product_price" msprop:Generator_ColumnVarNameInTable="columnorder_details_product_price" msprop:Generator_ColumnPropNameInRow="order_details_product_price" msprop:Generator_ColumnPropNameInTable="order_details_product_priceColumn" msprop:Generator_UserColumnName="order_details_product_price" type="xs:double" minOccurs="0" />
+              <xs:element name="unit_name" msprop:Generator_ColumnVarNameInTable="columnunit_name" msprop:Generator_ColumnPropNameInRow="unit_name" msprop:Generator_ColumnPropNameInTable="unit_nameColumn" msprop:Generator_UserColumnName="unit_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="order_details_total_price" msprop:Generator_ColumnVarNameInTable="columnorder_details_total_price" msprop:Generator_ColumnPropNameInRow="order_details_total_price" msprop:Generator_ColumnPropNameInTable="order_details_total_priceColumn" msprop:Generator_UserColumnName="order_details_total_price" type="xs:double" minOccurs="0" />
+              <xs:element name="product_code" msprop:Generator_ColumnVarNameInTable="columnproduct_code" msprop:Generator_ColumnPropNameInRow="product_code" msprop:Generator_ColumnPropNameInTable="product_codeColumn" msprop:Generator_UserColumnName="product_code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

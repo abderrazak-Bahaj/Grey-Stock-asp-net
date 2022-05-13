@@ -1,0 +1,56 @@
+﻿.navbar.main .btn-navbar
+{
+    float: right;
+    right: 205px;
+    left: auto;
+}
+
+.menu-hidden .navbar.main .btn-navbar
+{
+    right: 0px;
+    left: auto;
+}
+
+.navbar.main .appbrand
+{
+    float: right;
+    right: 0px;
+    position: absolute;
+}
+
+#menu .profile
+{
+    padding: 45px 15px 10px;
+}
+
+#menu .profile
+{
+        padding: 50px 16px 41px;
+}
+#headertxt
+{
+    margin: 30px;
+    text-align: right;
+    direction: rtl;
+}
+
+.widget .widget-head
+{
+    text-align: right;
+    direction: rtl;
+}
+
+.widget .widget-body
+{
+    text-align: right;
+    direction: rtl;
+}
+#content .innerLR > .widget:last-child
+{
+    margin: 5px;
+
+}
+.innerLR
+{
+    margin: 5px;
+}

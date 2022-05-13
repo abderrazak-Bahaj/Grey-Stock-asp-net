@@ -1,0 +1,2348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD74C0E8-4937-45D2-973A-02CFFB824338}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>store_sale_point</RootNamespace>
+    <AssemblyName>store_sale_point</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20820.6783, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\Access_Denied.aspx" />
+    <Content Include="admin\box.aspx" />
+    <Content Include="admin\setting_permission_UserInGroup.aspx" />
+    <Content Include="admin\setting_permission_pagesInGroup.aspx" />
+    <Content Include="admin\setting_permission_pages.aspx" />
+    <Content Include="admin\setting_permission_Activation_users.aspx" />
+    <Content Include="admin\historyInOut_User.aspx" />
+    <Content Include="admin\rep_Dialy_sales.aspx" />
+    <Content Include="admin\home.aspx" />
+    <Content Include="admin\rep_sales_1.aspx" />
+    <Content Include="admin\rep_sales_Total.aspx" />
+    <Content Include="admin\PO_Purchase_Back.aspx" />
+    <Content Include="admin\c_s_customer.aspx" />
+    <Content Include="admin\c_s_supplier.aspx" />
+    <Content Include="admin\POS.aspx" />
+    <Content Include="admin\POS_Back.aspx" />
+    <Content Include="admin\PO_Purchase.aspx" />
+    <Content Include="admin\PO_Transfare.aspx" />
+    <Content Include="admin\product_add.aspx" />
+    <Content Include="admin\product_edit.aspx" />
+    <Content Include="admin\product_historyPrice.aspx" />
+    <Content Include="admin\product_view.aspx" />
+    <Content Include="admin\rep_product.aspx" />
+    <Content Include="admin\rep_sales.aspx" />
+    <Content Include="admin\setting_general.aspx" />
+    <Content Include="admin\setting_permission_group.aspx" />
+    <Content Include="admin\setting_method_pay.aspx" />
+    <Content Include="admin\setting_category.aspx" />
+    <Content Include="admin\setting_box_account.aspx" />
+    <Content Include="admin\setting_box_kind.aspx" />
+    <Content Include="admin\setting_order_kind.aspx" />
+    <Content Include="admin\setting_permission_users.aspx" />
+    <Content Include="admin\setting_unit.aspx" />
+    <Content Include="admin\setting_branch.aspx" />
+    <Content Include="admin\setting_store.aspx" />
+    <Content Include="admin\setting_user_kind.aspx" />
+    <Content Include="admin\Test.aspx" />
+    <Content Include="admin\Test1.aspx" />
+    <Content Include="admin\Test3.aspx" />
+    <Content Include="admin\Test2.aspx" />
+    <Content Include="admin\Test4.aspx" />
+    <Content Include="admin\Test5.aspx" />
+    <Content Include="admin\Test6.aspx" />
+    <Content Include="admin\Test7.aspx" />
+    <Content Include="admin\WebForm1.aspx" />
+    <Content Include="bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\extend\bootbox.js" />
+    <Content Include="bootstrap\extend\bootstrap-hover-dropdown\demo.html" />
+    <Content Include="bootstrap\extend\bootstrap-hover-dropdown\twitter-bootstrap-hover-dropdown.js" />
+    <Content Include="bootstrap\extend\bootstrap-hover-dropdown\twitter-bootstrap-hover-dropdown.min.js" />
+    <Content Include="bootstrap\extend\bootstrap-select\bootstrap-select.css" />
+    <Content Include="bootstrap\extend\bootstrap-select\bootstrap-select.js" />
+    <Content Include="bootstrap\extend\bootstrap-toggle-buttons\examples\index.html" />
+    <Content Include="bootstrap\extend\bootstrap-toggle-buttons\static\js\jquery.min.js" />
+    <Content Include="bootstrap\extend\bootstrap-toggle-buttons\static\js\jquery.toggle.buttons.js" />
+    <Content Include="bootstrap\extend\bootstrap-toggle-buttons\static\stylesheets\bootstrap-toggle-buttons.css" />
+    <Content Include="bootstrap\extend\bootstrap-wysihtml5\css\bootstrap-wysihtml5-0.0.2.css" />
+    <Content Include="bootstrap\extend\bootstrap-wysihtml5\img\glyphicons-halflings.png" />
+    <Content Include="bootstrap\extend\bootstrap-wysihtml5\js\bootstrap-wysihtml5-0.0.2.js" />
+    <Content Include="bootstrap\extend\bootstrap-wysihtml5\js\bootstrap-wysihtml5-0.0.2.min.js" />
+    <Content Include="bootstrap\extend\bootstrap-wysihtml5\js\wysihtml5-0.3.0_rc2.js" />
+    <Content Include="bootstrap\extend\bootstrap-wysihtml5\js\wysihtml5-0.3.0_rc2.min.js" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\css\jasny-bootstrap-responsive.css" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\css\jasny-bootstrap-responsive.min.css" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\css\jasny-bootstrap.css" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\css\jasny-bootstrap.min.css" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\fonts\iconic_fill.svg" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\fonts\iconic_stroke.svg" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\js\bootstrap-fileupload.js" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\js\bootstrap-inputmask.js" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\js\bootstrap-rowlink.js" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\js\jasny-bootstrap.js" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\js\jasny-bootstrap.min.js" />
+    <Content Include="bootstrap\extend\twitter-bootstrap-wizard\jquery.bootstrap.wizard.js" />
+    <Content Include="bootstrap\font-awesome\css\font-awesome.min.css" />
+    <Content Include="bootstrap\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="file_managers.html" />
+    <Content Include="Global.asax" />
+    <Content Include="img\Acess_Denied.jpg" />
+    <Content Include="img\add.png" />
+    <Content Include="img\calendar.png" />
+    <Content Include="img\cancel.png" />
+    <Content Include="img\Delete.png" />
+    <Content Include="img\edit.png" />
+    <Content Include="img\loading1.gif" />
+    <Content Include="img\loading2.gif" />
+    <Content Include="img\save.png" />
+    <Content Include="index_v2.html" />
+    <Content Include="login.aspx" />
+    <Content Include="quicksearch.js" />
+    <Content Include="Rpt\Rpt_Frm.aspx" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="tables.html" />
+    <Content Include="theme\css\edit_style.min.css" />
+    <Content Include="theme\css\glyphicons.css" />
+    <Content Include="theme\css\style.css" />
+    <Content Include="theme\css\style.min.css" />
+    <Content Include="theme\fonts\glyphicons-regular.svg" />
+    <Content Include="theme\images\docs\mobile-responsive-tables-block.PNG" />
+    <Content Include="theme\images\docs\mobile-responsive-tables-horizontal-swipe.PNG" />
+    <Content Include="theme\images\docs\mobile-responsive-tables-regular.PNG" />
+    <Content Include="theme\images\gallery\1.jpg" />
+    <Content Include="theme\images\gallery\10.jpg" />
+    <Content Include="theme\images\gallery\11.jpg" />
+    <Content Include="theme\images\gallery\12.jpg" />
+    <Content Include="theme\images\gallery\2.jpg" />
+    <Content Include="theme\images\gallery\3.jpg" />
+    <Content Include="theme\images\gallery\4.jpg" />
+    <Content Include="theme\images\gallery\5.jpg" />
+    <Content Include="theme\images\gallery\6.jpg" />
+    <Content Include="theme\images\gallery\7.jpg" />
+    <Content Include="theme\images\gallery\8.jpg" />
+    <Content Include="theme\images\gallery\9.jpg" />
+    <Content Include="theme\images\gallery\rs\1.jpg" />
+    <Content Include="theme\images\gallery\rs\10.jpg" />
+    <Content Include="theme\images\gallery\rs\11.jpg" />
+    <Content Include="theme\images\gallery\rs\12.jpg" />
+    <Content Include="theme\images\gallery\rs\2.jpg" />
+    <Content Include="theme\images\gallery\rs\3.jpg" />
+    <Content Include="theme\images\gallery\rs\4.jpg" />
+    <Content Include="theme\images\gallery\rs\5.jpg" />
+    <Content Include="theme\images\gallery\rs\6.jpg" />
+    <Content Include="theme\images\gallery\rs\7.jpg" />
+    <Content Include="theme\images\gallery\rs\8.jpg" />
+    <Content Include="theme\images\gallery\rs\9.jpg" />
+    <Content Include="theme\images\lang\en.png" />
+    <Content Include="theme\images\lang\fr.png" />
+    <Content Include="theme\images\lang\it.png" />
+    <Content Include="theme\images\lang\pl.png" />
+    <Content Include="theme\images\lang\ro.png" />
+    <Content Include="theme\images\pattern1.png" />
+    <Content Include="theme\images\pattern2.png" />
+    <Content Include="theme\scripts\ASPSnippets_Pager.min.js" />
+    <Content Include="theme\scripts\Bootstrap-Image-Gallery\css\bootstrap-image-gallery.css" />
+    <Content Include="theme\scripts\Bootstrap-Image-Gallery\css\bootstrap-image-gallery.min.css" />
+    <Content Include="theme\scripts\Bootstrap-Image-Gallery\css\style.css" />
+    <Content Include="theme\scripts\Bootstrap-Image-Gallery\img\loading.gif" />
+    <Content Include="theme\scripts\Bootstrap-Image-Gallery\index.html" />
+    <Content Include="theme\scripts\Bootstrap-Image-Gallery\js\bootstrap-image-gallery.js" />
+    <Content Include="theme\scripts\Bootstrap-Image-Gallery\js\bootstrap-image-gallery.min.js" />
+    <Content Include="theme\scripts\Bootstrap-Image-Gallery\js\main.js" />
+    <Content Include="theme\scripts\DataTables\docs\34cdb56b2c.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.defaults.columns.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.defaults.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.defaults.oLanguage.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.defaults.oLanguage.oAria.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.defaults.oLanguage.oPaginate.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.defaults.oSearch.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.ext.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.models.ext.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.models.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.models.oColumn.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.models.oRow.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.models.oSearch.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.models.oSettings.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.models.oSettings.oBrowser.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.models.oSettings.oFeatures.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.models.oSettings.oLanguage.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.models.oSettings.oPreviousSearch.html" />
+    <Content Include="theme\scripts\DataTables\docs\DataTable.models.oSettings.oScroll.html" />
+    <Content Include="theme\scripts\DataTables\docs\index.html" />
+    <Content Include="theme\scripts\DataTables\docs\media\css\doc.css" />
+    <Content Include="theme\scripts\DataTables\docs\media\css\shCore.css" />
+    <Content Include="theme\scripts\DataTables\docs\media\css\shThemeDataTables.css" />
+    <Content Include="theme\scripts\DataTables\docs\media\images\arrow.jpg" />
+    <Content Include="theme\scripts\DataTables\docs\media\images\arrow.png" />
+    <Content Include="theme\scripts\DataTables\docs\media\images\extended.png" />
+    <Content Include="theme\scripts\DataTables\docs\media\js\doc.js" />
+    <Content Include="theme\scripts\DataTables\docs\media\js\jquery.js" />
+    <Content Include="theme\scripts\DataTables\docs\media\js\shBrushJScript.js" />
+    <Content Include="theme\scripts\DataTables\docs\media\js\shCore.js" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\column_render.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\complex_header.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\defaults.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\dom_multiple_elements.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\dom_toolbar.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\dt_events.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\events_live.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\events_post_init.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\events_pre_init.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\footer_callback.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\highlight.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\html_sort.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\language_file.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\length_menu.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\localstorage.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\row_callback.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\row_grouping.html" />
+    <Content Include="theme\scripts\DataTables\examples\advanced_init\sorting_control.html" />
+    <Content Include="theme\scripts\DataTables\examples\ajax\ajax.html" />
+    <Content Include="theme\scripts\DataTables\examples\ajax\custom_data_property.html" />
+    <Content Include="theme\scripts\DataTables\examples\ajax\deep.html" />
+    <Content Include="theme\scripts\DataTables\examples\ajax\defer_render.html" />
+    <Content Include="theme\scripts\DataTables\examples\ajax\null_data_source.html" />
+    <Content Include="theme\scripts\DataTables\examples\ajax\objects.html" />
+    <Content Include="theme\scripts\DataTables\examples\ajax\objects_subarrays.html" />
+    <Content Include="theme\scripts\DataTables\examples\ajax\sources\arrays.txt" />
+    <Content Include="theme\scripts\DataTables\examples\ajax\sources\arrays_subobjects.txt" />
+    <Content Include="theme\scripts\DataTables\examples\ajax\sources\array_only.txt" />
+    <Content Include="theme\scripts\DataTables\examples\ajax\sources\custom_prop.txt" />
+    <Content Include="theme\scripts\DataTables\examples\ajax\sources\deep.txt" />
+    <Content Include="theme\scripts\DataTables\examples\ajax\sources\objects.txt" />
+    <Content Include="theme\scripts\DataTables\examples\ajax\sources\objects_subarrays.txt" />
+    <Content Include="theme\scripts\DataTables\examples\api\add_row.html" />
+    <Content Include="theme\scripts\DataTables\examples\api\api_in_init.html" />
+    <Content Include="theme\scripts\DataTables\examples\api\counter_column.html" />
+    <Content Include="theme\scripts\DataTables\examples\api\editable.html" />
+    <Content Include="theme\scripts\DataTables\examples\api\form.html" />
+    <Content Include="theme\scripts\DataTables\examples\api\highlight.html" />
+    <Content Include="theme\scripts\DataTables\examples\api\multi_filter.html" />
+    <Content Include="theme\scripts\DataTables\examples\api\multi_filter_select.html" />
+    <Content Include="theme\scripts\DataTables\examples\api\regex.html" />
+    <Content Include="theme\scripts\DataTables\examples\api\row_details.html" />
+    <Content Include="theme\scripts\DataTables\examples\api\select_row.html" />
+    <Content Include="theme\scripts\DataTables\examples\api\select_single_row.html" />
+    <Content Include="theme\scripts\DataTables\examples\api\show_hide.html" />
+    <Content Include="theme\scripts\DataTables\examples\api\tabs_and_scrolling.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\alt_pagination.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\base.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\base_themeroller.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\complex_header.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\dom.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\filter_only.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\flexible_width.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\hidden_columns.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\language.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\multiple_tables.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\multi_col_sort.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\scroll_x.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\scroll_xy.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\scroll_y.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\scroll_y_infinite.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\scroll_y_theme.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\state_save.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\table_sorting.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\themes.html" />
+    <Content Include="theme\scripts\DataTables\examples\basic_init\zero_config.html" />
+    <Content Include="theme\scripts\DataTables\examples\data_sources\ajax.html" />
+    <Content Include="theme\scripts\DataTables\examples\data_sources\dom.html" />
+    <Content Include="theme\scripts\DataTables\examples\data_sources\js_array.html" />
+    <Content Include="theme\scripts\DataTables\examples\data_sources\server_side.html" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\data.sql" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\details_close.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\details_open.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\de_DE.txt" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\index.html" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\jquery-ui-tabs.js" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\jquery.jeditable.js" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\jquery.tooltip.css" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\jquery.tooltip.js" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\syntax\css\shCore.css" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\syntax\images\arrow.jpg" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\syntax\images\extended.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\syntax\js\shCore.js" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\smoothness\jquery-ui-1.8.4.custom.css" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\themes\ui-lightness\jquery-ui-1.8.4.custom.css" />
+    <Content Include="theme\scripts\DataTables\examples\index.html" />
+    <Content Include="theme\scripts\DataTables\examples\plug-ins\dom_sort.html" />
+    <Content Include="theme\scripts\DataTables\examples\plug-ins\html_sort.html" />
+    <Content Include="theme\scripts\DataTables\examples\plug-ins\paging_plugin.html" />
+    <Content Include="theme\scripts\DataTables\examples\plug-ins\plugin_api.html" />
+    <Content Include="theme\scripts\DataTables\examples\plug-ins\range_filtering.html" />
+    <Content Include="theme\scripts\DataTables\examples\plug-ins\sorting_plugin.html" />
+    <Content Include="theme\scripts\DataTables\examples\plug-ins\sorting_sType.html" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\custom_vars.html" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\defer_loading.html" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\editable.html" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\ids.html" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\jsonp.html" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\object_data.html" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\pipeline.html" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\post.html" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\row_details.html" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\select_rows.html" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\server_side.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\callbacks.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\columns.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\index.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\inputs.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\css\AutoFill.css" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\02ff627f40.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\36456bf45f.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\47cac4f141.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\5a72546831.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\8ee4007a12.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\a69b02bcf2.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\AutoFill.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\b44bd4821a.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\c6945fdb4a.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\global.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\index.html" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\media\css\doc.css" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\media\css\shCore.css" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\media\css\shThemeDataTables.css" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\media\images\arrow.jpg" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\media\images\arrow.png" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\media\images\extended.png" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\media\js\doc.js" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\media\js\jquery.js" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\media\js\shBrushJScript.js" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\media\js\shCore.js" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\images\filler.png" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\js\AutoFill.js" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\js\AutoFill.min.js" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\scrolling.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\alt_insert.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\colvis.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\col_filter.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\fixedcolumns.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\fixedheader.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\index.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\css\ColReorder.css" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\46848f6f3b.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\4f1246032c.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\a69b02bcf2.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\ColReorder.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\global.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\index.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\media\css\doc.css" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\media\css\shCore.css" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\media\css\shThemeDataTables.css" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\media\images\arrow.jpg" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\media\images\arrow.png" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\media\images\extended.png" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\media\js\doc.js" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\media\js\jquery.js" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\media\js\shBrushJScript.js" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\media\js\shCore.js" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\images\insert.png" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\js\ColReorder.js" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\js\ColReorder.min.js" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\predefined.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\reset.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\scrolling.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\server_side.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\state_save.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\theme.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\exclude_columns.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\index.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\css\ColVis.css" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\css\ColVisAlt.css" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\a69b02bcf2.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\ccb5a49865.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\ColVis.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\global.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\index.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\media\css\doc.css" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\media\css\shCore.css" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\media\css\shThemeDataTables.css" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\media\images\arrow.jpg" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\media\images\arrow.png" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\media\images\extended.png" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\media\js\doc.js" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\media\js\jquery.js" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\media\js\shBrushJScript.js" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\media\js\shCore.js" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\images\button.png" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\js\ColVis.js" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\js\ColVis.min.js" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\mouseover.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\style.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\text.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\theme.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\title_callback.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\two_tables.html" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\two_tables_identical.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\col_filter.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\css_size.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\070023b890.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\526f872207.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\73098af57c.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\889588ec06.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\91bce7c4ad.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\a6bd52f587.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\d3890ba7c4.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\e20106c59a.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\FixedColumns.defaults.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\FixedColumns.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\global.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\index.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\media\css\doc.css" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\media\css\shCore.css" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\media\css\shThemeDataTables.css" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\media\images\arrow.jpg" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\media\images\arrow.png" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\media\images\extended.png" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\media\js\doc.js" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\media\js\jquery.js" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\media\js\shBrushJScript.js" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\media\js\shCore.js" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\index.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\index_column.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\left_right_columns.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\media\js\FixedColumns.js" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\media\js\FixedColumns.min.js" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\right_column.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\rowspan.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\row_grouping.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\row_grouping_height.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\scale_fixed.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\scale_relative.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\server-side-processing.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\themed.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\two_columns.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\x_y_scrolling.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedHeader\html_table.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedHeader\index.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedHeader\js\FixedHeader.js" />
+    <Content Include="theme\scripts\DataTables\extras\FixedHeader\js\FixedHeader.min.js" />
+    <Content Include="theme\scripts\DataTables\extras\FixedHeader\top_bottom_left_right.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedHeader\top_left.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedHeader\two_tables.html" />
+    <Content Include="theme\scripts\DataTables\extras\FixedHeader\zIndexes.html" />
+    <Content Include="theme\scripts\DataTables\extras\KeyTable\datatable.html" />
+    <Content Include="theme\scripts\DataTables\extras\KeyTable\datatable_scrolling.html" />
+    <Content Include="theme\scripts\DataTables\extras\KeyTable\editing.html" />
+    <Content Include="theme\scripts\DataTables\extras\KeyTable\form.html" />
+    <Content Include="theme\scripts\DataTables\extras\KeyTable\index.html" />
+    <Content Include="theme\scripts\DataTables\extras\KeyTable\js\KeyTable.js" />
+    <Content Include="theme\scripts\DataTables\extras\KeyTable\js\KeyTable.min.js" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\api_scrolling.html" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\index.html" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\large_js_source.html" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\css\dataTables.scroller.css" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\data\2500.txt" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\baed189d4a.html" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\c6053fac6b.html" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\index.html" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\media\css\doc.css" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\media\css\shCore.css" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\media\css\shThemeDataTables.css" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\media\images\arrow.jpg" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\media\images\arrow.png" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\media\images\extended.png" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\media\js\doc.js" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\media\js\jquery.js" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\media\js\shBrushJScript.js" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\media\js\shCore.js" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\Scroller.html" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\Scroller.oDefaults.html" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\images\loading-background.png" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\js\dataTables.scroller.js" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\js\dataTables.scroller.min.js" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\server-side_processing.html" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\state_saving.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\alter_buttons.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\alt_init.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\bootstrap.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\button_text.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\collection.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\defaults.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\index.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\css\TableTools.css" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\css\TableTools_JUI.css" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\background.png" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\collection.png" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\collection_hover.png" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\copy.png" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\copy_hover.png" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\csv.png" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\csv_hover.png" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\pdf.png" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\pdf_hover.png" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\print.png" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\print_hover.png" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\xls.png" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\xls_hover.png" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\js\TableTools.js" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\js\TableTools.min.js" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\js\ZeroClipboard.js" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\swf\copy_csv_xls.swf" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\multiple_tables.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\multi_instance.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\pdf_message.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\plug-in.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\select_multi.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\select_single.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\swf_path.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\tabs.html" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\theme.html" />
+    <Content Include="theme\scripts\DataTables\license-bsd.txt" />
+    <Content Include="theme\scripts\DataTables\license-gpl2.txt" />
+    <Content Include="theme\scripts\DataTables\media\css\demo_page.css" />
+    <Content Include="theme\scripts\DataTables\media\css\demo_table.css" />
+    <Content Include="theme\scripts\DataTables\media\css\demo_table_jui.css" />
+    <Content Include="theme\scripts\DataTables\media\css\DT_bootstrap.css" />
+    <Content Include="theme\scripts\DataTables\media\css\jquery.dataTables.css" />
+    <Content Include="theme\scripts\DataTables\media\css\jquery.dataTables_themeroller.css" />
+    <Content Include="theme\scripts\DataTables\media\images\back_disabled.png" />
+    <Content Include="theme\scripts\DataTables\media\images\back_enabled.png" />
+    <Content Include="theme\scripts\DataTables\media\images\back_enabled_hover.png" />
+    <Content Include="theme\scripts\DataTables\media\images\favicon.ico" />
+    <Content Include="theme\scripts\DataTables\media\images\forward_disabled.png" />
+    <Content Include="theme\scripts\DataTables\media\images\forward_enabled.png" />
+    <Content Include="theme\scripts\DataTables\media\images\forward_enabled_hover.png" />
+    <Content Include="theme\scripts\DataTables\media\images\sort_asc.png" />
+    <Content Include="theme\scripts\DataTables\media\images\sort_asc_disabled.png" />
+    <Content Include="theme\scripts\DataTables\media\images\sort_both.png" />
+    <Content Include="theme\scripts\DataTables\media\images\sort_desc.png" />
+    <Content Include="theme\scripts\DataTables\media\images\sort_desc_disabled.png" />
+    <Content Include="theme\scripts\DataTables\media\js\DT_bootstrap.js" />
+    <Content Include="theme\scripts\DataTables\media\js\jquery.dataTables.js" />
+    <Content Include="theme\scripts\DataTables\media\js\jquery.dataTables.min.js" />
+    <Content Include="theme\scripts\DataTables\media\js\jquery.js" />
+    <Content Include="theme\scripts\DataTables\media\src\api\api.internal.js" />
+    <Content Include="theme\scripts\DataTables\media\src\api\api.methods.js" />
+    <Content Include="theme\scripts\DataTables\media\src\api\api.static.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.ajax.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.columns.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.constructor.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.data.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.draw.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.filter.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.info.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.init.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.length.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.page.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.processing.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.scrolling.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.sizing.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.sort.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.state.js" />
+    <Content Include="theme\scripts\DataTables\media\src\core\core.support.js" />
+    <Content Include="theme\scripts\DataTables\media\src\DataTables.js" />
+    <Content Include="theme\scripts\DataTables\media\src\ext\ext.classes.js" />
+    <Content Include="theme\scripts\DataTables\media\src\ext\ext.paging.js" />
+    <Content Include="theme\scripts\DataTables\media\src\ext\ext.sorting.js" />
+    <Content Include="theme\scripts\DataTables\media\src\ext\ext.types.js" />
+    <Content Include="theme\scripts\DataTables\media\src\model\model.column.js" />
+    <Content Include="theme\scripts\DataTables\media\src\model\model.defaults.columns.js" />
+    <Content Include="theme\scripts\DataTables\media\src\model\model.defaults.js" />
+    <Content Include="theme\scripts\DataTables\media\src\model\model.ext.js" />
+    <Content Include="theme\scripts\DataTables\media\src\model\model.row.js" />
+    <Content Include="theme\scripts\DataTables\media\src\model\model.search.js" />
+    <Content Include="theme\scripts\DataTables\media\src\model\model.settings.js" />
+    <Content Include="theme\scripts\DataTables\Readme.txt" />
+    <Content Include="theme\scripts\excanvas\examples\example1.html" />
+    <Content Include="theme\scripts\excanvas\examples\example2.html" />
+    <Content Include="theme\scripts\excanvas\examples\example3.html" />
+    <Content Include="theme\scripts\excanvas\examples\ff.jpg" />
+    <Content Include="theme\scripts\excanvas\excanvas.compiled.js" />
+    <Content Include="theme\scripts\excanvas\excanvas.js" />
+    <Content Include="theme\scripts\excanvas\testcases\arc.html" />
+    <Content Include="theme\scripts\excanvas\testcases\clearpath.html" />
+    <Content Include="theme\scripts\excanvas\testcases\drawimage.html" />
+    <Content Include="theme\scripts\excanvas\testcases\gradient.html" />
+    <Content Include="theme\scripts\excanvas\testcases\gradient2.html" />
+    <Content Include="theme\scripts\excanvas\testcases\linewidth.html" />
+    <Content Include="theme\scripts\excanvas\testcases\overflow.html" />
+    <Content Include="theme\scripts\excanvas\testcases\quadraticcurve.html" />
+    <Content Include="theme\scripts\excanvas\testcases\resizing.html" />
+    <Content Include="theme\scripts\excanvas\testcases\saverestorepath.html" />
+    <Content Include="theme\scripts\excanvas\testcases\stroke-scale-rotate.html" />
+    <Content Include="theme\scripts\excanvas\testcases\stroke-should-not-close-path.html" />
+    <Content Include="theme\scripts\farbtastic\CHANGELOG.html" />
+    <Content Include="theme\scripts\farbtastic\demo1.html" />
+    <Content Include="theme\scripts\farbtastic\demo2.html" />
+    <Content Include="theme\scripts\farbtastic\farbtastic.css" />
+    <Content Include="theme\scripts\farbtastic\farbtastic.js" />
+    <Content Include="theme\scripts\farbtastic\LICENSE.txt" />
+    <Content Include="theme\scripts\farbtastic\marker.png" />
+    <Content Include="theme\scripts\farbtastic\mask.png" />
+    <Content Include="theme\scripts\farbtastic\README.html" />
+    <Content Include="theme\scripts\farbtastic\wheel.png" />
+    <Content Include="theme\scripts\flot\API.txt" />
+    <Content Include="theme\scripts\flot\examples\ajax.html" />
+    <Content Include="theme\scripts\flot\examples\annotating.html" />
+    <Content Include="theme\scripts\flot\examples\arrow-down.gif" />
+    <Content Include="theme\scripts\flot\examples\arrow-left.gif" />
+    <Content Include="theme\scripts\flot\examples\arrow-right.gif" />
+    <Content Include="theme\scripts\flot\examples\arrow-up.gif" />
+    <Content Include="theme\scripts\flot\examples\basic.html" />
+    <Content Include="theme\scripts\flot\examples\graph-types.html" />
+    <Content Include="theme\scripts\flot\examples\hs-2004-27-a-large_web.jpg" />
+    <Content Include="theme\scripts\flot\examples\image.html" />
+    <Content Include="theme\scripts\flot\examples\index.html" />
+    <Content Include="theme\scripts\flot\examples\interacting-axes.html" />
+    <Content Include="theme\scripts\flot\examples\interacting.html" />
+    <Content Include="theme\scripts\flot\examples\layout.css" />
+    <Content Include="theme\scripts\flot\examples\multiple-axes.html" />
+    <Content Include="theme\scripts\flot\examples\navigate.html" />
+    <Content Include="theme\scripts\flot\examples\percentiles.html" />
+    <Content Include="theme\scripts\flot\examples\pie.html" />
+    <Content Include="theme\scripts\flot\examples\realtime.html" />
+    <Content Include="theme\scripts\flot\examples\resize.html" />
+    <Content Include="theme\scripts\flot\examples\selection.html" />
+    <Content Include="theme\scripts\flot\examples\setting-options.html" />
+    <Content Include="theme\scripts\flot\examples\stacking.html" />
+    <Content Include="theme\scripts\flot\examples\symbols.html" />
+    <Content Include="theme\scripts\flot\examples\thresholding.html" />
+    <Content Include="theme\scripts\flot\examples\time.html" />
+    <Content Include="theme\scripts\flot\examples\tracking.html" />
+    <Content Include="theme\scripts\flot\examples\turning-series.html" />
+    <Content Include="theme\scripts\flot\examples\visitors.html" />
+    <Content Include="theme\scripts\flot\examples\zooming.html" />
+    <Content Include="theme\scripts\flot\excanvas.js" />
+    <Content Include="theme\scripts\flot\excanvas.min.js" />
+    <Content Include="theme\scripts\flot\FAQ.txt" />
+    <Content Include="theme\scripts\flot\jquery.colorhelpers.js" />
+    <Content Include="theme\scripts\flot\jquery.colorhelpers.min.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.crosshair.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.crosshair.min.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.fillbetween.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.fillbetween.min.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.image.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.image.min.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.min.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.navigate.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.navigate.min.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.orderBars.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.pie.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.pie.min.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.resize.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.resize.min.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.selection.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.selection.min.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.stack.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.stack.min.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.symbol.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.symbol.min.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.threshold.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.threshold.min.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.tooltip.js" />
+    <Content Include="theme\scripts\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="theme\scripts\flot\jquery.js" />
+    <Content Include="theme\scripts\flot\jquery.min.js" />
+    <Content Include="theme\scripts\flot\LICENSE.txt" />
+    <Content Include="theme\scripts\flot\NEWS.txt" />
+    <Content Include="theme\scripts\flot\PLUGINS.txt" />
+    <Content Include="theme\scripts\flot\README.txt" />
+    <Content Include="theme\scripts\form_validator.js" />
+    <Content Include="theme\scripts\fullcalendar\changelog.txt" />
+    <Content Include="theme\scripts\fullcalendar\demos\agenda-views.html" />
+    <Content Include="theme\scripts\fullcalendar\demos\basic-views.html" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="theme\scripts\fullcalendar\demos\cupertino\theme.css" />
+    <Content Include="theme\scripts\fullcalendar\demos\default.html" />
+    <Content Include="theme\scripts\fullcalendar\demos\external-dragging.html" />
+    <Content Include="theme\scripts\fullcalendar\demos\gcal.html" />
+    <Content Include="theme\scripts\fullcalendar\demos\json.html" />
+    <Content Include="theme\scripts\fullcalendar\demos\selectable.html" />
+    <Content Include="theme\scripts\fullcalendar\demos\theme.html" />
+    <Content Include="theme\scripts\fullcalendar\fullcalendar\fullcalendar.css" />
+    <Content Include="theme\scripts\fullcalendar\fullcalendar\fullcalendar.js" />
+    <Content Include="theme\scripts\fullcalendar\fullcalendar\fullcalendar.min.js" />
+    <Content Include="theme\scripts\fullcalendar\fullcalendar\fullcalendar.print.css" />
+    <Content Include="theme\scripts\fullcalendar\fullcalendar\gcal.js" />
+    <Content Include="theme\scripts\fullcalendar\GPL-LICENSE.txt" />
+    <Content Include="theme\scripts\fullcalendar\jquery\jquery-1.8.1.min.js" />
+    <Content Include="theme\scripts\fullcalendar\jquery\jquery-ui-1.8.23.custom.min.js" />
+    <Content Include="theme\scripts\fullcalendar\MIT-LICENSE.txt" />
+    <Content Include="theme\scripts\google-code-prettify\lang-apollo.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-clj.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-css.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-go.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-hs.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-lisp.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-lua.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-ml.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-n.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-proto.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-scala.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-sql.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-tex.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-vb.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-vhdl.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-wiki.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-xq.js" />
+    <Content Include="theme\scripts\google-code-prettify\lang-yaml.js" />
+    <Content Include="theme\scripts\google-code-prettify\prettify.css" />
+    <Content Include="theme\scripts\google-code-prettify\prettify.js" />
+    <Content Include="theme\scripts\Gritter\css\jquery.gritter.css" />
+    <Content Include="theme\scripts\Gritter\images\gritter-light.png" />
+    <Content Include="theme\scripts\Gritter\images\gritter-long.png" />
+    <Content Include="theme\scripts\Gritter\images\gritter.png" />
+    <Content Include="theme\scripts\Gritter\images\ie-spacer.gif" />
+    <Content Include="theme\scripts\Gritter\images\trees.jpg" />
+    <Content Include="theme\scripts\Gritter\index.html" />
+    <Content Include="theme\scripts\Gritter\js\jquery.gritter.js" />
+    <Content Include="theme\scripts\Gritter\js\jquery.gritter.min.js" />
+    <Content Include="theme\scripts\index.js" />
+    <Content Include="theme\scripts\jquery-1.8.2.min.js" />
+    <Content Include="theme\scripts\jquery-miniColors\index.html" />
+    <Content Include="theme\scripts\jquery-miniColors\jquery.miniColors.css" />
+    <Content Include="theme\scripts\jquery-miniColors\jquery.miniColors.js" />
+    <Content Include="theme\scripts\jquery-miniColors\jquery.minicolors.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\jquery-ui-1.9.2.custom.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\smoothness\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\jquery-ui-1.9.2.custom.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\css\ui-lightness\jquery-ui-1.9.2.custom.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\AUTHORS.txt" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\accordion\collapsible.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\accordion\custom-icons.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\accordion\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\accordion\fillspace.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\accordion\hoverintent.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\accordion\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\accordion\no-auto-height.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\accordion\sortable.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\categories.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\combobox.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\custom-data.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\folding.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\images\jqueryui_32x32.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\images\jquery_32x32.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\images\sizzlejs_32x32.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\images\transparent_1x1.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\images\ui-anim_basic_16x16.gif" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\london.xml" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\maxheight.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\multiple-remote.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\multiple.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\remote-jsonp.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\remote-with-cache.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\remote.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\xml.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\button\checkbox.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\button\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\button\icons.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\button\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\button\radio.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\button\splitbutton.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\button\toolbar.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\alt-field.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\animation.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\buttonbar.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\date-formats.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\date-range.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\dropdown-month-year.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\icon-trigger.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\images\calendar.gif" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\inline.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\localization.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\min-max.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\multiple-calendars.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\other-months.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\datepicker\show-week.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\demos.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\dialog\animated.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\dialog\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\dialog\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\dialog\modal-confirmation.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\dialog\modal-form.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\dialog\modal-message.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\dialog\modal.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\draggable\constrain-movement.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\draggable\cursor-style.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\draggable\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\draggable\delay-start.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\draggable\events.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\draggable\handle.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\draggable\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\draggable\revert.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\draggable\scroll.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\draggable\snap-to.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\draggable\sortable.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\draggable\visual-feedback.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\accepted-elements.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\images\high_tatras.jpg" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\images\high_tatras2.jpg" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\images\high_tatras2_min.jpg" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\images\high_tatras3.jpg" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\images\high_tatras3_min.jpg" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\images\high_tatras4.jpg" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\images\high_tatras4_min.jpg" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\images\high_tatras_min.jpg" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\photo-manager.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\propagation.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\revert.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\shopping-cart.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\droppable\visual-feedback.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\effect\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\effect\easing.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\effect\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\images\calendar.gif" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\images\demo-config-on-tile.gif" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\images\demo-config-on.gif" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\images\demo-spindown-closed.gif" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\images\demo-spindown-open.gif" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\images\icon-docs-info.gif" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\images\pbar-ani.gif" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\menu\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\menu\icons.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\menu\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\position\cycler.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\position\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\position\images\earth.jpg" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\position\images\flight.jpg" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\position\images\rocket.jpg" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\position\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\progressbar\animated.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\progressbar\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\progressbar\images\pbar-ani.gif" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\progressbar\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\progressbar\resize.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\resizable\animate.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\resizable\aspect-ratio.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\resizable\constrain-area.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\resizable\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\resizable\delay-start.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\resizable\helper.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\resizable\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\resizable\max-min.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\resizable\snap-to-grid.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\resizable\synchronous-resize.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\resizable\textarea.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\resizable\visual-feedback.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\selectable\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\selectable\display-grid.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\selectable\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\selectable\serialize.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\slider\colorpicker.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\slider\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\slider\hotelrooms.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\slider\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\slider\multiple-vertical.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\slider\range-vertical.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\slider\range.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\slider\rangemax.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\slider\rangemin.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\slider\side-scroll.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\slider\slider-vertical.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\slider\steps.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\sortable\connect-lists-through-tabs.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\sortable\connect-lists.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\sortable\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\sortable\delay-start.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\sortable\display-grid.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\sortable\empty-lists.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\sortable\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\sortable\items.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\sortable\placeholder.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\sortable\portlets.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\spinner\currency.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\spinner\decimal.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\spinner\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\spinner\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\spinner\latlong.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\spinner\overflow.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\spinner\time.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tabs\ajax.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tabs\ajax\content1.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tabs\ajax\content2.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tabs\bottom.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tabs\collapsible.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tabs\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tabs\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tabs\manipulation.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tabs\mouseover.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tabs\sortable.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tabs\vertical.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tooltip\ajax\content1.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tooltip\ajax\content2.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tooltip\custom-animation.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tooltip\custom-content.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tooltip\custom-style.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tooltip\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tooltip\forms.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tooltip\images\st-stephens.jpg" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tooltip\images\tower-bridge.jpg" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tooltip\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tooltip\tracking.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tooltip\video-player.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\widget\default.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\widget\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\accordion.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\autocomplete.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\blind-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\bounce-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\button.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\clip-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\datepicker.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\dialog.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\draggable.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\drop-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\droppable.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\explode-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\fade-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\fold-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\highlight-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\jQuery.widget.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\menu.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\mouse.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\position.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\progressbar.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\puff-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\pulsate-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\resizable.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\scale-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\selectable.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\shake-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\size-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\slide-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\slider.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\sortable.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\spinner.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\tabs.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\tooltip.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\docs\transfer-effect.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\external\globalize.culture.de-DE.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\external\globalize.culture.ja-JP.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\external\globalize.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\external\jquery.bgiframe-2.1.2.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\external\jquery.cookie.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\external\jquery.metadata.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\external\jquery.mousewheel.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\external\jshint.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\external\qunit.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\external\qunit.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\grunt.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\jquery-1.8.3.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\MIT-LICENSE.txt" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery-ui.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.accordion.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.all.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.base.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.button.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.core.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.dialog.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.menu.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.resizable.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.selectable.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.slider.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.spinner.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.tabs.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.theme.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery-ui.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.accordion.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.all.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.autocomplete.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.base.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.button.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.core.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.datepicker.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.dialog.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.menu.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.progressbar.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.resizable.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.selectable.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.slider.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.spinner.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.tabs.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.theme.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\jquery.ui.tooltip.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery-ui.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.accordion.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.button.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.core.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.dialog.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.menu.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.resizable.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.selectable.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.slider.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.spinner.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.tabs.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.theme.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\themes\ui-lightness\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery-ui-i18n.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ka.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery-ui.custom.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.accordion.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.autocomplete.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.button.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.core.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.datepicker.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.dialog.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.draggable.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.droppable.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.effect-blind.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.effect-bounce.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.effect-clip.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.effect-drop.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.effect-explode.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.effect-fade.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.effect-fold.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.effect-highlight.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.effect-pulsate.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.effect-scale.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.effect-shake.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.effect-slide.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.effect-transfer.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.effect.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.menu.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.mouse.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.position.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.progressbar.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.resizable.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.selectable.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.slider.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.sortable.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.spinner.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.tabs.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.tooltip.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\jquery.ui.widget.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery-ui-i18n.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-af.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ar-DZ.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ar.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-az.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-bg.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-bs.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ca.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-cs.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-cy-GB.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-da.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-de.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-el.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-en-AU.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-en-GB.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-en-NZ.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-eo.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-es.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-et.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-eu.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fa.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fi.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fo.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fr-CH.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fr.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-gl.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-he.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hi.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hr.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hu.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hy.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-id.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-is.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-it.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ja.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ka.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-kk.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-km.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ko.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-lb.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-lt.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-lv.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-mk.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ml.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ms.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-nl-BE.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-nl.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-no.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-pl.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-pt-BR.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-pt.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-rm.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ro.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ru.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sk.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sl.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sq.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sr-SR.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sr.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sv.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ta.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-th.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-tj.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-tr.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-uk.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-vi.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-zh-CN.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-zh-HK.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-zh-TW.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery-ui.custom.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.accordion.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.autocomplete.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.button.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.core.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.datepicker.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.dialog.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.draggable.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.droppable.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.effect-blind.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.effect-bounce.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.effect-clip.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.effect-drop.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.effect-explode.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.effect-fade.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.effect-fold.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.effect-highlight.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.effect-pulsate.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.effect-scale.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.effect-shake.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.effect-slide.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.effect-transfer.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.effect.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.menu.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.mouse.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.position.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.progressbar.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.resizable.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.selectable.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.slider.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.sortable.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.spinner.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.tabs.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.tooltip.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui\minified\jquery.ui.widget.min.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\index.html" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\js\jquery-1.8.3.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\js\jquery-ui-1.9.2.custom.js" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="theme\scripts\jquery-ui-touch-punch\jquery.ui.touch-punch.js" />
+    <Content Include="theme\scripts\jquery-ui-touch-punch\jquery.ui.touch-punch.min.js" />
+    <Content Include="theme\scripts\jquery-validation\changelog.txt" />
+    <Content Include="theme\scripts\jquery-validation\demo\ajaxSubmit-intergration-demo.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\captcha\captcha.js" />
+    <Content Include="theme\scripts\jquery-validation\demo\captcha\images\button.png" />
+    <Content Include="theme\scripts\jquery-validation\demo\captcha\style.css" />
+    <Content Include="theme\scripts\jquery-validation\demo\css\chili.css" />
+    <Content Include="theme\scripts\jquery-validation\demo\css\cmxform.css" />
+    <Content Include="theme\scripts\jquery-validation\demo\css\cmxformTemplate.css" />
+    <Content Include="theme\scripts\jquery-validation\demo\css\core.css" />
+    <Content Include="theme\scripts\jquery-validation\demo\css\reset.css" />
+    <Content Include="theme\scripts\jquery-validation\demo\css\screen.css" />
+    <Content Include="theme\scripts\jquery-validation\demo\custom-messages-metadata-demo.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\custom-methods-demo.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\dynamic-totals.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\errorcontainer-demo.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\file_input.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\images\bg.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\images\checked.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\images\cmxform-divider.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\images\cmxform-fieldset.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\images\loading.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\images\unchecked.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\index.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\jquerymobile.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\js\chili-1.7.pack.js" />
+    <Content Include="theme\scripts\jquery-validation\demo\login\images\bg.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\login\images\header1.jpg" />
+    <Content Include="theme\scripts\jquery-validation\demo\login\images\page.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\login\images\required_star.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\login\index.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\login\screen.css" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\ie6.css" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\backRequiredGray.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\back_green-fade.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\back_nav_blue.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\blank.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\button-submit.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\favicon.ico" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\help.png" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\left-nav-callout-long.png" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\login-sprite.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\logo_marketo.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\sf.png" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\step1-24.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\step2-24.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\step3-24.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\tab-sprite.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\tab_green.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\time.png" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\toggle.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\images\warning.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\index.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\jquery.maskedinput.js" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\mktSignup.js" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\step2.htm" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\stylesheet.css" />
+    <Content Include="theme\scripts\jquery-validation\demo\milk\bg.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\milk\index.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\milk\left_white.png" />
+    <Content Include="theme\scripts\jquery-validation\demo\milk\milk.css" />
+    <Content Include="theme\scripts\jquery-validation\demo\milk\milk.png" />
+    <Content Include="theme\scripts\jquery-validation\demo\milk\right_white.png" />
+    <Content Include="theme\scripts\jquery-validation\demo\multipart\index.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\multipart\js\jquery.maskedinput-1.0.js" />
+    <Content Include="theme\scripts\jquery-validation\demo\multipart\js\ui.accordion.js" />
+    <Content Include="theme\scripts\jquery-validation\demo\multipart\js\ui.core.js" />
+    <Content Include="theme\scripts\jquery-validation\demo\multipart\style.css" />
+    <Content Include="theme\scripts\jquery-validation\demo\radio-checkbox-select-demo.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\tabs\index.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\themerollered.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\tinymce\index.html" />
+    <Content Include="theme\scripts\jquery-validation\demo\tinymce\themes\simple\editor_template.js" />
+    <Content Include="theme\scripts\jquery-validation\demo\tinymce\themes\simple\img\icons.gif" />
+    <Content Include="theme\scripts\jquery-validation\demo\tinymce\themes\simple\langs\en.js" />
+    <Content Include="theme\scripts\jquery-validation\demo\tinymce\themes\simple\skins\default\ui.css" />
+    <Content Include="theme\scripts\jquery-validation\demo\tinymce\tiny_mce.js" />
+    <Content Include="theme\scripts\jquery-validation\dist\additional-methods.js" />
+    <Content Include="theme\scripts\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="theme\scripts\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="theme\scripts\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="theme\scripts\jquery-validation\grunt.js" />
+    <Content Include="theme\scripts\jquery-validation\lib\jquery-1.3.2.js" />
+    <Content Include="theme\scripts\jquery-validation\lib\jquery-1.4.2.js" />
+    <Content Include="theme\scripts\jquery-validation\lib\jquery-1.4.4.js" />
+    <Content Include="theme\scripts\jquery-validation\lib\jquery-1.5.2.js" />
+    <Content Include="theme\scripts\jquery-validation\lib\jquery-1.6.1.js" />
+    <Content Include="theme\scripts\jquery-validation\lib\jquery-1.7.2.js" />
+    <Content Include="theme\scripts\jquery-validation\lib\jquery.form.js" />
+    <Content Include="theme\scripts\jquery-validation\lib\jquery.js" />
+    <Content Include="theme\scripts\jquery-validation\lib\jquery.metadata.js" />
+    <Content Include="theme\scripts\jquery-validation\lib\jquery.mockjax.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_ar.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_bg.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_ca.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_cs.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_da.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_de.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_el.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_es.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_et.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_eu.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_fa.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_fi.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_fr.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_he.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_hr.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_hu.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_it.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_ja.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_ka.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_kk.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_lt.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_lv.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_nl.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_no.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_pl.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_pt_BR.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_pt_PT.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_ro.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_ru.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_si.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_sk.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_sl.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_sr.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_sv.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_th.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_tr.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_uk.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_vi.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_zh.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\messages_zh_TW.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\methods_de.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\methods_nl.js" />
+    <Content Include="theme\scripts\jquery-validation\localization\methods_pt.js" />
+    <Content Include="theme\scripts\jquery-validation\test\events.html" />
+    <Content Include="theme\scripts\jquery-validation\test\firebug\errorIcon.png" />
+    <Content Include="theme\scripts\jquery-validation\test\firebug\firebug.css" />
+    <Content Include="theme\scripts\jquery-validation\test\firebug\firebug.html" />
+    <Content Include="theme\scripts\jquery-validation\test\firebug\firebug.js" />
+    <Content Include="theme\scripts\jquery-validation\test\firebug\firebugx.js" />
+    <Content Include="theme\scripts\jquery-validation\test\firebug\infoIcon.png" />
+    <Content Include="theme\scripts\jquery-validation\test\firebug\warningIcon.png" />
+    <Content Include="theme\scripts\jquery-validation\test\index.html" />
+    <Content Include="theme\scripts\jquery-validation\test\jquery.js" />
+    <Content Include="theme\scripts\jquery-validation\test\large.html" />
+    <Content Include="theme\scripts\jquery-validation\test\messages.js" />
+    <Content Include="theme\scripts\jquery-validation\test\methods.js" />
+    <Content Include="theme\scripts\jquery-validation\test\qunit\qunit.css" />
+    <Content Include="theme\scripts\jquery-validation\test\qunit\qunit.js" />
+    <Content Include="theme\scripts\jquery-validation\test\rules.js" />
+    <Content Include="theme\scripts\jquery-validation\test\selects\index.html" />
+    <Content Include="theme\scripts\jquery-validation\test\tabs.html" />
+    <Content Include="theme\scripts\jquery-validation\test\test.js" />
+    <Content Include="theme\scripts\jquery.ba-resize.js" />
+    <Content Include="theme\scripts\jquery.cookie.js" />
+    <Content Include="theme\scripts\jquery.masonry.min.js" />
+    <Content Include="theme\scripts\jquery.sparkline.min.js" />
+    <Content Include="theme\scripts\json2.js" />
+    <Content Include="theme\scripts\less-1.3.3.min.js" />
+    <Content Include="theme\scripts\load.js" />
+    <Content Include="theme\scripts\modernizr.custom.76094.js" />
+    <Content Include="theme\scripts\notyfy\demo\allLayouts.html" />
+    <Content Include="theme\scripts\notyfy\demo\allTypes.html" />
+    <Content Include="theme\scripts\notyfy\demo\api.html" />
+    <Content Include="theme\scripts\notyfy\demo\buttons.css" />
+    <Content Include="theme\scripts\notyfy\demo\consumingAlert.html" />
+    <Content Include="theme\scripts\notyfy\demo\customContainer.html" />
+    <Content Include="theme\scripts\notyfy\demo\index.html" />
+    <Content Include="theme\scripts\notyfy\demo\jquery-1.7.2.min.js" />
+    <Content Include="theme\scripts\notyfy\demo\usingWithButtons.html" />
+    <Content Include="theme\scripts\notyfy\demo\usingWithButtons2.html" />
+    <Content Include="theme\scripts\notyfy\demo\usingWithModal.html" />
+    <Content Include="theme\scripts\notyfy\jquery.notyfy.css" />
+    <Content Include="theme\scripts\notyfy\jquery.notyfy.js" />
+    <Content Include="theme\scripts\notyfy\LICENSE.txt" />
+    <Content Include="theme\scripts\notyfy\themes\default.css" />
+    <Content Include="theme\scripts\pixelmatrix-uniform\css\uniform.default.css" />
+    <Content Include="theme\scripts\pixelmatrix-uniform\demo\demo.html" />
+    <Content Include="theme\scripts\pixelmatrix-uniform\images\bg-input-focus.png" />
+    <Content Include="theme\scripts\pixelmatrix-uniform\images\bg-input.png" />
+    <Content Include="theme\scripts\pixelmatrix-uniform\images\sprite.png" />
+    <Content Include="theme\scripts\pixelmatrix-uniform\jquery.uniform.js" />
+    <Content Include="theme\scripts\pixelmatrix-uniform\jquery.uniform.min.js" />
+    <Content Include="theme\scripts\plupload\changelog.txt" />
+    <Content Include="theme\scripts\plupload\docs\api\class_plupload.File.html" />
+    <Content Include="theme\scripts\plupload\docs\api\class_plupload.html" />
+    <Content Include="theme\scripts\plupload\docs\api\class_plupload.QueueProgress.html" />
+    <Content Include="theme\scripts\plupload\docs\api\class_plupload.Runtime.html" />
+    <Content Include="theme\scripts\plupload\docs\api\class_plupload.runtimes.BrowserPlus.html" />
+    <Content Include="theme\scripts\plupload\docs\api\class_plupload.runtimes.Flash.html" />
+    <Content Include="theme\scripts\plupload\docs\api\class_plupload.runtimes.Gears.html" />
+    <Content Include="theme\scripts\plupload\docs\api\class_plupload.runtimes.Html4.html" />
+    <Content Include="theme\scripts\plupload\docs\api\class_plupload.runtimes.Html5.html" />
+    <Content Include="theme\scripts\plupload\docs\api\class_plupload.runtimes.Silverlight.html" />
+    <Content Include="theme\scripts\plupload\docs\api\class_plupload.Uploader.html" />
+    <Content Include="theme\scripts\plupload\docs\api\css\general.css" />
+    <Content Include="theme\scripts\plupload\docs\api\css\grids.css" />
+    <Content Include="theme\scripts\plupload\docs\api\css\jquery.treeview.css" />
+    <Content Include="theme\scripts\plupload\docs\api\css\reset.css" />
+    <Content Include="theme\scripts\plupload\docs\api\css\shCore.css" />
+    <Content Include="theme\scripts\plupload\docs\api\css\shThemeMoxieDoc.css" />
+    <Content Include="theme\scripts\plupload\docs\api\img\class.gif" />
+    <Content Include="theme\scripts\plupload\docs\api\img\event.gif" />
+    <Content Include="theme\scripts\plupload\docs\api\img\help.png" />
+    <Content Include="theme\scripts\plupload\docs\api\img\inherit-arrow.gif" />
+    <Content Include="theme\scripts\plupload\docs\api\img\inherited.gif" />
+    <Content Include="theme\scripts\plupload\docs\api\img\loader.gif" />
+    <Content Include="theme\scripts\plupload\docs\api\img\magnifier.png" />
+    <Content Include="theme\scripts\plupload\docs\api\img\method.gif" />
+    <Content Include="theme\scripts\plupload\docs\api\img\namespace.gif" />
+    <Content Include="theme\scripts\plupload\docs\api\img\page_white_code.png" />
+    <Content Include="theme\scripts\plupload\docs\api\img\page_white_copy.png" />
+    <Content Include="theme\scripts\plupload\docs\api\img\printer.png" />
+    <Content Include="theme\scripts\plupload\docs\api\img\property.gif" />
+    <Content Include="theme\scripts\plupload\docs\api\img\root.gif" />
+    <Content Include="theme\scripts\plupload\docs\api\img\static.gif" />
+    <Content Include="theme\scripts\plupload\docs\api\img\treeview-famfamfam.gif" />
+    <Content Include="theme\scripts\plupload\docs\api\img\wrapping.png" />
+    <Content Include="theme\scripts\plupload\docs\api\index.html" />
+    <Content Include="theme\scripts\plupload\docs\api\js\clipboard.swf" />
+    <Content Include="theme\scripts\plupload\docs\api\js\general.js" />
+    <Content Include="theme\scripts\plupload\docs\api\js\jquery.treeview.min.js" />
+    <Content Include="theme\scripts\plupload\docs\api\js\shBrushJScript.js" />
+    <Content Include="theme\scripts\plupload\docs\api\js\shCore.js" />
+    <Content Include="theme\scripts\plupload\docs\api\model.xml" />
+    <Content Include="theme\scripts\plupload\docs\api\plupload.vsdoc.js" />
+    <Content Include="theme\scripts\plupload\examples\bg.jpg" />
+    <Content Include="theme\scripts\plupload\examples\custom.html" />
+    <Content Include="theme\scripts\plupload\examples\jquery\events.html" />
+    <Content Include="theme\scripts\plupload\examples\jquery\jquery_ui_widget.html" />
+    <Content Include="theme\scripts\plupload\examples\jquery\queue_widget.html" />
+    <Content Include="theme\scripts\plupload\js\i18n\cs.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\da.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\de.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\el.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\es.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\et.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\fa.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\fi.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\fr-ca.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\fr.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\hr.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\hu.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\it.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\ja.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\ko.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\lv.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\nl.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\pl.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\pt-br.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\ro.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\ru.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\sr.js" />
+    <Content Include="theme\scripts\plupload\js\i18n\sv.js" />
+    <Content Include="theme\scripts\plupload\js\jquery.plupload.queue\css\jquery.plupload.queue.css" />
+    <Content Include="theme\scripts\plupload\js\jquery.plupload.queue\img\backgrounds.gif" />
+    <Content Include="theme\scripts\plupload\js\jquery.plupload.queue\img\buttons-disabled.png" />
+    <Content Include="theme\scripts\plupload\js\jquery.plupload.queue\img\buttons.png" />
+    <Content Include="theme\scripts\plupload\js\jquery.plupload.queue\img\delete.gif" />
+    <Content Include="theme\scripts\plupload\js\jquery.plupload.queue\img\done.gif" />
+    <Content Include="theme\scripts\plupload\js\jquery.plupload.queue\img\error.gif" />
+    <Content Include="theme\scripts\plupload\js\jquery.plupload.queue\img\throbber.gif" />
+    <Content Include="theme\scripts\plupload\js\jquery.plupload.queue\img\transp50.png" />
+    <Content Include="theme\scripts\plupload\js\jquery.plupload.queue\jquery.plupload.queue.js" />
+    <Content Include="theme\scripts\plupload\js\jquery.ui.plupload\css\jquery.ui.plupload.css" />
+    <Content Include="theme\scripts\plupload\js\jquery.ui.plupload\img\plupload-bw.png" />
+    <Content Include="theme\scripts\plupload\js\jquery.ui.plupload\img\plupload.png" />
+    <Content Include="theme\scripts\plupload\js\jquery.ui.plupload\jquery.ui.plupload.js" />
+    <Content Include="theme\scripts\plupload\js\plupload.browserplus.js" />
+    <Content Include="theme\scripts\plupload\js\plupload.flash.js" />
+    <Content Include="theme\scripts\plupload\js\plupload.flash.swf" />
+    <Content Include="theme\scripts\plupload\js\plupload.full.js" />
+    <Content Include="theme\scripts\plupload\js\plupload.gears.js" />
+    <Content Include="theme\scripts\plupload\js\plupload.html4.js" />
+    <Content Include="theme\scripts\plupload\js\plupload.html5.js" />
+    <Content Include="theme\scripts\plupload\js\plupload.js" />
+    <Content Include="theme\scripts\plupload\js\plupload.silverlight.js" />
+    <Content Include="theme\scripts\plupload\js\plupload.silverlight.xap" />
+    <Content Include="theme\scripts\plupload\license.txt" />
+    <Content Include="theme\scripts\themer.js" />
+    <Content Include="theme\skins\css\black-and-white.css" />
+    <Content Include="theme\skins\css\black-and-white.min.css" />
+    <Content Include="theme\skins\css\blue-gray.css" />
+    <Content Include="theme\skins\css\blue-gray.min.css" />
+    <Content Include="theme\skins\css\brown.css" />
+    <Content Include="theme\skins\css\brown.min.css" />
+    <Content Include="theme\skins\css\green-army.css" />
+    <Content Include="theme\skins\css\green-army.min.css" />
+    <Content Include="theme\skins\css\purple-gray.css" />
+    <Content Include="theme\skins\css\purple-gray.min.css" />
+    <Content Include="theme\skins\css\purple-wine.css" />
+    <Content Include="theme\skins\css\purple-wine.min.css" />
+    <Content Include="Upload\noimage.png" />
+    <Content Include="usercontrol\menu_master.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\Access_Denied.aspx.cs">
+      <DependentUpon>Access_Denied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Access_Denied.aspx.designer.cs">
+      <DependentUpon>Access_Denied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\box.aspx.cs">
+      <DependentUpon>box.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\box.aspx.designer.cs">
+      <DependentUpon>box.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_permission_UserInGroup.aspx.cs">
+      <DependentUpon>setting_permission_UserInGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_permission_UserInGroup.aspx.designer.cs">
+      <DependentUpon>setting_permission_UserInGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_permission_pagesInGroup.aspx.cs">
+      <DependentUpon>setting_permission_pagesInGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_permission_pagesInGroup.aspx.designer.cs">
+      <DependentUpon>setting_permission_pagesInGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_permission_pages.aspx.cs">
+      <DependentUpon>setting_permission_pages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_permission_pages.aspx.designer.cs">
+      <DependentUpon>setting_permission_pages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_permission_Activation_users.aspx.cs">
+      <DependentUpon>setting_permission_Activation_users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_permission_Activation_users.aspx.designer.cs">
+      <DependentUpon>setting_permission_Activation_users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\historyInOut_User.aspx.cs">
+      <DependentUpon>historyInOut_User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\historyInOut_User.aspx.designer.cs">
+      <DependentUpon>historyInOut_User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\rep_Dialy_sales.aspx.cs">
+      <DependentUpon>rep_Dialy_sales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\rep_Dialy_sales.aspx.designer.cs">
+      <DependentUpon>rep_Dialy_sales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\rep_sales_1.aspx.cs">
+      <DependentUpon>rep_sales_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\rep_sales_1.aspx.designer.cs">
+      <DependentUpon>rep_sales_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\rep_sales_Total.aspx.cs">
+      <DependentUpon>rep_sales_Total.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\rep_sales_Total.aspx.designer.cs">
+      <DependentUpon>rep_sales_Total.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\PO_Purchase_Back.aspx.cs">
+      <DependentUpon>PO_Purchase_Back.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\PO_Purchase_Back.aspx.designer.cs">
+      <DependentUpon>PO_Purchase_Back.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\c_s_customer.aspx.cs">
+      <DependentUpon>c_s_customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\c_s_customer.aspx.designer.cs">
+      <DependentUpon>c_s_customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\c_s_supplier.aspx.cs">
+      <DependentUpon>c_s_supplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\c_s_supplier.aspx.designer.cs">
+      <DependentUpon>c_s_supplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\POS.aspx.cs">
+      <DependentUpon>POS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\POS.aspx.designer.cs">
+      <DependentUpon>POS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\POS_Back.aspx.cs">
+      <DependentUpon>POS_Back.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\POS_Back.aspx.designer.cs">
+      <DependentUpon>POS_Back.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\PO_Purchase.aspx.cs">
+      <DependentUpon>PO_Purchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\PO_Purchase.aspx.designer.cs">
+      <DependentUpon>PO_Purchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\PO_Transfare.aspx.cs">
+      <DependentUpon>PO_Transfare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\PO_Transfare.aspx.designer.cs">
+      <DependentUpon>PO_Transfare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\product_add.aspx.cs">
+      <DependentUpon>product_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\product_add.aspx.designer.cs">
+      <DependentUpon>product_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\product_edit.aspx.cs">
+      <DependentUpon>product_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\product_edit.aspx.designer.cs">
+      <DependentUpon>product_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\product_historyPrice.aspx.cs">
+      <DependentUpon>product_historyPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\product_historyPrice.aspx.designer.cs">
+      <DependentUpon>product_historyPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\product_view.aspx.cs">
+      <DependentUpon>product_view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\product_view.aspx.designer.cs">
+      <DependentUpon>product_view.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\rep_product.aspx.cs">
+      <DependentUpon>rep_product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\rep_product.aspx.designer.cs">
+      <DependentUpon>rep_product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\rep_sales.aspx.cs">
+      <DependentUpon>rep_sales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\rep_sales.aspx.designer.cs">
+      <DependentUpon>rep_sales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_general.aspx.cs">
+      <DependentUpon>setting_general.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_general.aspx.designer.cs">
+      <DependentUpon>setting_general.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_permission_group.aspx.cs">
+      <DependentUpon>setting_permission_group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_permission_group.aspx.designer.cs">
+      <DependentUpon>setting_permission_group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_method_pay.aspx.cs">
+      <DependentUpon>setting_method_pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_method_pay.aspx.designer.cs">
+      <DependentUpon>setting_method_pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_category.aspx.cs">
+      <DependentUpon>setting_category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_category.aspx.designer.cs">
+      <DependentUpon>setting_category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_box_account.aspx.cs">
+      <DependentUpon>setting_box_account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_box_account.aspx.designer.cs">
+      <DependentUpon>setting_box_account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_box_kind.aspx.cs">
+      <DependentUpon>setting_box_kind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_box_kind.aspx.designer.cs">
+      <DependentUpon>setting_box_kind.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_order_kind.aspx.cs">
+      <DependentUpon>setting_order_kind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_order_kind.aspx.designer.cs">
+      <DependentUpon>setting_order_kind.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_permission_users.aspx.cs">
+      <DependentUpon>setting_permission_users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_permission_users.aspx.designer.cs">
+      <DependentUpon>setting_permission_users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_unit.aspx.cs">
+      <DependentUpon>setting_unit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_unit.aspx.designer.cs">
+      <DependentUpon>setting_unit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_branch.aspx.cs">
+      <DependentUpon>setting_branch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_branch.aspx.designer.cs">
+      <DependentUpon>setting_branch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_store.aspx.cs">
+      <DependentUpon>setting_store.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_store.aspx.designer.cs">
+      <DependentUpon>setting_store.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\setting_user_kind.aspx.cs">
+      <DependentUpon>setting_user_kind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\setting_user_kind.aspx.designer.cs">
+      <DependentUpon>setting_user_kind.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Test1.aspx.cs">
+      <DependentUpon>Test1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Test1.aspx.designer.cs">
+      <DependentUpon>Test1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Test3.aspx.cs">
+      <DependentUpon>Test3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Test3.aspx.designer.cs">
+      <DependentUpon>Test3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Test2.aspx.cs">
+      <DependentUpon>Test2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Test2.aspx.designer.cs">
+      <DependentUpon>Test2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Test4.aspx.cs">
+      <DependentUpon>Test4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Test4.aspx.designer.cs">
+      <DependentUpon>Test4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Test5.aspx.cs">
+      <DependentUpon>Test5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Test5.aspx.designer.cs">
+      <DependentUpon>Test5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Test6.aspx.cs">
+      <DependentUpon>Test6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Test6.aspx.designer.cs">
+      <DependentUpon>Test6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Test7.aspx.cs">
+      <DependentUpon>Test7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Test7.aspx.designer.cs">
+      <DependentUpon>Test7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_Login.Master.cs">
+      <DependentUpon>admin_Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_Login.Master.designer.cs">
+      <DependentUpon>admin_Login.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Class_General\AllUsers.cs" />
+    <Compile Include="Class_General\QteProduct.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rpt\Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rpt\Rpt_Frm.aspx.cs">
+      <DependentUpon>Rpt_Frm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rpt\Rpt_Frm.aspx.designer.cs">
+      <DependentUpon>Rpt_Frm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="store_sale_pointDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>store_sale_pointDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrol\menu_master.ascx.cs">
+      <DependentUpon>menu_master.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usercontrol\menu_master.ascx.designer.cs">
+      <DependentUpon>menu_master.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap\extend\bootstrap-hover-dropdown\README.md" />
+    <Content Include="bootstrap\extend\bootstrap-select\README.md" />
+    <Content Include="bootstrap\extend\bootstrap-toggle-buttons\.gitignore" />
+    <Content Include="bootstrap\extend\bootstrap-toggle-buttons\LICENSE" />
+    <Content Include="bootstrap\extend\bootstrap-toggle-buttons\README.md" />
+    <Content Include="bootstrap\extend\bootstrap-toggle-buttons\static\config.rb" />
+    <Content Include="bootstrap\extend\bootstrap-toggle-buttons\static\sass\bootstrap-toggle-buttons.scss" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\fonts\iconic_fill.eot" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\fonts\iconic_fill.otf" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\fonts\iconic_fill.ttf" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\fonts\iconic_fill.woff" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\fonts\iconic_stroke.eot" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\fonts\iconic_stroke.otf" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\fonts\iconic_stroke.ttf" />
+    <Content Include="bootstrap\extend\jasny-bootstrap\fonts\iconic_stroke.woff" />
+    <Content Include="theme\fonts\glyphicons-regular.eot" />
+    <Content Include="theme\fonts\glyphicons-regular.otf" />
+    <Content Include="theme\fonts\glyphicons-regular.ttf" />
+    <Content Include="theme\fonts\glyphicons-regular.woff" />
+    <Content Include="theme\less\mixins.less" />
+    <Content Include="theme\less\style.less" />
+    <Content Include="theme\scripts\Bootstrap-Image-Gallery\.gitignore" />
+    <Content Include="theme\scripts\Bootstrap-Image-Gallery\Makefile" />
+    <Content Include="theme\scripts\Bootstrap-Image-Gallery\package.json" />
+    <Content Include="theme\scripts\Bootstrap-Image-Gallery\README.md" />
+    <Content Include="theme\scripts\DataTables\component.json" />
+    <Content Include="theme\scripts\DataTables\docs\media\license\Syntax Highlighter" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\editable_ajax.php" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\infiniteScroll.php" />
+    <Content Include="theme\scripts\DataTables\examples\examples_support\syntax\license\Syntax Highlighter" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\scripts\custom_data_property.php" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\scripts\details_col.php" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\scripts\filter_col.php" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\scripts\id.php" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\scripts\id_jsonp.php" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\scripts\jsonp.php" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\scripts\objects.php" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\scripts\objects_jsonp.php" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\scripts\post.php" />
+    <Content Include="theme\scripts\DataTables\examples\server_side\scripts\server_processing.php" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\docs\media\license\Syntax Highlighter" />
+    <Content Include="theme\scripts\DataTables\extras\AutoFill\media\js\AutoFill.min.js.gz" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\docs\media\license\Syntax Highlighter" />
+    <Content Include="theme\scripts\DataTables\extras\ColReorder\media\js\ColReorder.min.js.gz" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\docs\media\license\Syntax Highlighter" />
+    <Content Include="theme\scripts\DataTables\extras\ColVis\media\js\ColVis.min.js.gz" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\docs\media\license\Syntax Highlighter" />
+    <Content Include="theme\scripts\DataTables\extras\FixedColumns\media\js\FixedColumns.min.js.gz" />
+    <Content Include="theme\scripts\DataTables\extras\FixedHeader\js\FixedHeader.min.js.gz" />
+    <Content Include="theme\scripts\DataTables\extras\KeyTable\js\KeyTable.min.js.gz" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\data\server_processing.php" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\docs\media\license\Syntax Highlighter" />
+    <Content Include="theme\scripts\DataTables\extras\Scroller\media\js\dataTables.scroller.min.js.gz" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\as3\lib\AlivePDF.swc" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\as3\ZeroClipboard.as" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\as3\ZeroClipboardPdf.as" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\psd\collection.psd" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\psd\copy document.psd" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\psd\file_types.psd" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\images\psd\printer.psd" />
+    <Content Include="theme\scripts\DataTables\extras\TableTools\media\js\TableTools.min.js.gz" />
+    <Content Include="theme\scripts\DataTables\media\images\Sorting icons.psd" />
+    <Content Include="theme\scripts\DataTables\package.json" />
+    <Content Include="theme\scripts\DataTables\scripts\jshint.config" />
+    <Content Include="theme\scripts\DataTables\scripts\make.sh" />
+    <Content Include="theme\scripts\DataTables\scripts\unit_tests.sh" />
+    <Content Include="theme\scripts\excanvas\AUTHORS" />
+    <Content Include="theme\scripts\excanvas\COPYING" />
+    <Content Include="theme\scripts\excanvas\examples\.svn\all-wcprops" />
+    <Content Include="theme\scripts\excanvas\examples\.svn\entries" />
+    <Content Include="theme\scripts\excanvas\examples\.svn\format" />
+    <Content Include="theme\scripts\excanvas\examples\.svn\prop-base\ff.jpg.svn-base" />
+    <Content Include="theme\scripts\excanvas\examples\.svn\text-base\example1.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\examples\.svn\text-base\example2.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\examples\.svn\text-base\example3.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\examples\.svn\text-base\ff.jpg.svn-base" />
+    <Content Include="theme\scripts\excanvas\README" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\all-wcprops" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\entries" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\format" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\prop-base\overflow.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\text-base\arc.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\text-base\clearpath.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\text-base\drawimage.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\text-base\gradient.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\text-base\gradient2.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\text-base\linewidth.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\text-base\overflow.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\text-base\quadraticcurve.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\text-base\resizing.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\text-base\saverestorepath.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\text-base\stroke-scale-rotate.html.svn-base" />
+    <Content Include="theme\scripts\excanvas\testcases\.svn\text-base\stroke-should-not-close-path.html.svn-base" />
+    <Content Include="theme\scripts\flot\examples\data-eu-gdp-growth-1.json" />
+    <Content Include="theme\scripts\flot\examples\data-eu-gdp-growth-2.json" />
+    <Content Include="theme\scripts\flot\examples\data-eu-gdp-growth-3.json" />
+    <Content Include="theme\scripts\flot\examples\data-eu-gdp-growth-4.json" />
+    <Content Include="theme\scripts\flot\examples\data-eu-gdp-growth-5.json" />
+    <Content Include="theme\scripts\flot\examples\data-eu-gdp-growth.json" />
+    <Content Include="theme\scripts\flot\examples\data-japan-gdp-growth.json" />
+    <Content Include="theme\scripts\flot\examples\data-usa-gdp-growth.json" />
+    <Content Include="theme\scripts\flot\Makefile" />
+    <Content Include="theme\scripts\fullcalendar\demos\json-events.php" />
+    <Content Include="theme\scripts\Gritter\README.markdown" />
+    <Content Include="theme\scripts\jquery-miniColors\component.json" />
+    <Content Include="theme\scripts\jquery-miniColors\readme.md" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\autocomplete\search.php" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tabs\ajax\content3-slow.php" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\demos\tabs\ajax\content4-broken.php" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\package.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\README.md" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.accordion.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.autocomplete.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.button.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.core.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.datepicker.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.dialog.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.draggable.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.droppable.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.effect-blind.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.effect-bounce.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.effect-clip.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.effect-drop.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.effect-explode.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.effect-fade.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.effect-fold.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.effect-highlight.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.effect-pulsate.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.effect-scale.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.effect-shake.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.effect-slide.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.effect-transfer.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.effect.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.menu.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.mouse.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.position.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.progressbar.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.resizable.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.selectable.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.slider.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.sortable.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.spinner.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.tabs.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.tooltip.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-1.9.2.custom\development-bundle\ui.widget.jquery.json" />
+    <Content Include="theme\scripts\jquery-ui-touch-punch\README.md" />
+    <Content Include="theme\scripts\jquery-validation\demo\captcha\fonts\Anorexia.ttf" />
+    <Content Include="theme\scripts\jquery-validation\demo\captcha\images\image.php" />
+    <Content Include="theme\scripts\jquery-validation\demo\captcha\image_req.php" />
+    <Content Include="theme\scripts\jquery-validation\demo\captcha\index.php" />
+    <Content Include="theme\scripts\jquery-validation\demo\captcha\newsession.php" />
+    <Content Include="theme\scripts\jquery-validation\demo\captcha\process.php" />
+    <Content Include="theme\scripts\jquery-validation\demo\captcha\rand.php" />
+    <Content Include="theme\scripts\jquery-validation\demo\form.php" />
+    <Content Include="theme\scripts\jquery-validation\demo\form.phps" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\emails.php" />
+    <Content Include="theme\scripts\jquery-validation\demo\marketo\emails.phps" />
+    <Content Include="theme\scripts\jquery-validation\demo\milk\emails.php" />
+    <Content Include="theme\scripts\jquery-validation\demo\milk\emails.phps" />
+    <Content Include="theme\scripts\jquery-validation\demo\milk\users.php" />
+    <Content Include="theme\scripts\jquery-validation\demo\milk\users.phps" />
+    <Content Include="theme\scripts\jquery-validation\package.json" />
+    <Content Include="theme\scripts\jquery-validation\README.md" />
+    <Content Include="theme\scripts\notyfy\.gitignore" />
+    <Content Include="theme\scripts\notyfy\README.markdown" />
+    <Content Include="theme\scripts\pixelmatrix-uniform\README.textile" />
+    <Content Include="theme\scripts\plupload\examples\dump.php" />
+    <Content Include="theme\scripts\plupload\examples\jquery\s3.php" />
+    <Content Include="theme\scripts\plupload\examples\upload.php" />
+    <Content Include="theme\scripts\plupload\readme.md" />
+    <Content Include="theme\skins\less\black-and-white.less" />
+    <Content Include="theme\skins\less\blue-gray.less" />
+    <Content Include="theme\skins\less\brown.less" />
+    <Content Include="theme\skins\less\green-army.less" />
+    <Content Include="theme\skins\less\purple-gray.less" />
+    <Content Include="theme\skins\less\purple-wine.less" />
+    <Content Include="admin\Site1.Master" />
+    <Content Include="store_sale_pointDataSet.xsc">
+      <DependentUpon>store_sale_pointDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="admin_Login.Master" />
+    <Content Include="Rpt\Ds.xsc">
+      <DependentUpon>Ds.xsd</DependentUpon>
+    </Content>
+    <Content Include="bootstrap\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="bootstrap\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="bootstrap\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="packages.config" />
+    <None Include="Rpt\Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Rpt\Ds.xss">
+      <DependentUpon>Ds.xsd</DependentUpon>
+    </Content>
+    <None Include="store_sale_pointDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>store_sale_pointDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="store_sale_pointDataSet.xss">
+      <DependentUpon>store_sale_pointDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="theme\scripts\excanvas\examples\.svn\props\" />
+    <Folder Include="theme\scripts\excanvas\examples\.svn\tmp\prop-base\" />
+    <Folder Include="theme\scripts\excanvas\examples\.svn\tmp\props\" />
+    <Folder Include="theme\scripts\excanvas\examples\.svn\tmp\text-base\" />
+    <Folder Include="theme\scripts\excanvas\testcases\.svn\props\" />
+    <Folder Include="theme\scripts\excanvas\testcases\.svn\tmp\prop-base\" />
+    <Folder Include="theme\scripts\excanvas\testcases\.svn\tmp\props\" />
+    <Folder Include="theme\scripts\excanvas\testcases\.svn\tmp\text-base\" />
+    <Folder Include="theme\scripts\plupload\examples\uploads\" />
+    <Folder Include="Upload\File\" />
+    <Folder Include="Upload\Product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reporting\Report1.rdlc" />
+    <EmbeddedResource Include="Rpt\rpt_Product.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1849</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1110/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

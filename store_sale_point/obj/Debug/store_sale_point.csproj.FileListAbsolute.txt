@@ -1,0 +1,100 @@
+C:\Users\yoyo-sasa\Documents\Visual Studio 2012\Projects\store_sale_point\store_sale_point\bin\store_sale_point.dll
+C:\Users\yoyo-sasa\Documents\Visual Studio 2012\Projects\store_sale_point\store_sale_point\bin\store_sale_point.pdb
+C:\Users\yoyo-sasa\Documents\Visual Studio 2012\Projects\store_sale_point\store_sale_point\bin\AjaxControlToolkit.dll
+C:\Users\yoyo-sasa\Documents\Visual Studio 2012\Projects\store_sale_point\store_sale_point\obj\Debug\RdlCompile.cache
+C:\Users\yoyo-sasa\Documents\Visual Studio 2012\Projects\store_sale_point\store_sale_point\obj\Debug\RdlCompile.compiled
+C:\Users\yoyo-sasa\Documents\Visual Studio 2012\Projects\store_sale_point\store_sale_point\obj\Debug\store_sale_point.dll
+C:\Users\yoyo-sasa\Documents\Visual Studio 2012\Projects\store_sale_point\store_sale_point\obj\Debug\store_sale_point.pdb
+C:\Users\yoyo-sasa\Documents\Visual Studio 2012\Projects\store_sale_point\store_sale_point\obj\Debug\store_sale_point.csprojResolveAssemblyReference.cache
+C:\Users\yoyo-sasa\Documents\Visual Studio 2012\Projects\store_sale_point\store_sale_point\bin\mscorlib.dll
+C:\Users\yoyo-sasa\Documents\Visual Studio 2012\Projects\store_sale_point\store_sale_point\bin\normidna.nlp
+C:\Users\yoyo-sasa\Documents\Visual Studio 2012\Projects\store_sale_point\store_sale_point\bin\normnfc.nlp
+C:\Users\yoyo-sasa\Documents\Visual Studio 2012\Projects\store_sale_point\store_sale_point\bin\normnfd.nlp
+C:\Users\yoyo-sasa\Documents\Visual Studio 2012\Projects\store_sale_point\store_sale_point\bin\normnfkc.nlp
+C:\Users\yoyo-sasa\Documents\Visual Studio 2012\Projects\store_sale_point\store_sale_point\bin\normnfkd.nlp
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\store_sale_point.dll.config
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\store_sale_point.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\store_sale_point.pdb
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\AjaxControlToolkit.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\Microsoft.ReportViewer.Common.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\Microsoft.ReportViewer.DataVisualization.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\Microsoft.ReportViewer.Design.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\Microsoft.ReportViewer.WebDesign.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\Microsoft.ReportViewer.WebForms.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\Microsoft.SqlServer.Types.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\EnvDTE.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\Microsoft.VisualStudio.Shell.Interop.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\Microsoft.ReportViewer.WinForms.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\stdole.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\Microsoft.VisualStudio.OLE.Interop.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\Microsoft.VisualStudio.TextManager.Interop.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\Microsoft.MSXML.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\de\Microsoft.ReportViewer.Common.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\es\Microsoft.ReportViewer.Common.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\fr\Microsoft.ReportViewer.Common.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\it\Microsoft.ReportViewer.Common.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ja\Microsoft.ReportViewer.Common.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ko\Microsoft.ReportViewer.Common.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\pt\Microsoft.ReportViewer.Common.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ru\Microsoft.ReportViewer.Common.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\de\Microsoft.ReportViewer.Design.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\es\Microsoft.ReportViewer.Design.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\fr\Microsoft.ReportViewer.Design.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\it\Microsoft.ReportViewer.Design.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ja\Microsoft.ReportViewer.Design.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ko\Microsoft.ReportViewer.Design.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\pt\Microsoft.ReportViewer.Design.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ru\Microsoft.ReportViewer.Design.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\obj\Debug\RdlCompile.cache
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\obj\Debug\RdlCompile.compiled
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\obj\Debug\store_sale_point.csproj.CoreCompileInputs.cache
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\obj\Debug\store_sale_point.csproj.CopyComplete
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\obj\Debug\store_sale_point.dll
+E:\Project 2012\Projects\store_sale_point2\store_sale_point\obj\Debug\store_sale_point.pdb
